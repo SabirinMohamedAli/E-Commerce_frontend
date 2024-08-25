@@ -5,12 +5,12 @@ const Footer = () => {
     return (
         <footer className="bg-black text-white py-8">
             <div className="container mx-auto px-4">
-                <div className="flex justify-between items-center border-b border-gray-700 pb-6">
-                    <div className="flex flex-col items-start">
+                <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-700 pb-6">
+                    <div className="text-center md:text-left mb-4 md:mb-0">
                         <h2 className="text-xl font-bold">LOGO</h2>
                         <p className="text-gray-400">SLOGAN COMPANY</p>
                     </div>
-                    <div className="flex space-x-12">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 text-center md:text-left">
                         <div className="flex flex-col space-y-2">
                             <a href="#" className="text-gray-400 hover:text-white">Weebly Themes</a>
                             <a href="#" className="text-gray-400 hover:text-white">Pre-Sale FAQs</a>

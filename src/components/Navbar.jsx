@@ -1,60 +1,42 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingCart, FaSearch, FaHeart } from 'react-icons/fa';
+import { FaShoppingCart, FaHeart, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = ({ cartItemCount }) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
 
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
-
-    const handleSearchSubmit = (e) => {
-        e.preventDefault();
-        console.log("Searching for:", searchTerm);
-        // Halkaan waxaad ku dari kartaa function-ka lagu raadinaayo alaabta
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
     };
 
     return (
         <nav className="bg-white shadow-lg">
             <div className="max-w-6xl mx-auto px-4">
-                <div className="flex justify-between items-center">
-                    <div className="flex space-x-7">
-                        <div>
-                            <Link to="/" className="flex items-center py-4 px-2 text-gray-800">
-                                <span className="font-semibold text-lg">E-Commerce</span>
+                <div className="flex justify-between items-center py-4">
+                    <Link to="/" className="text-gray-800 text-lg font-semibold">SabirinStyle </Link>
+                    <div className="md:hidden">
+                        <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+                            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                        </button>
+                    </div>
+                    <div className={`md:flex space-x-7 ${isOpen ? 'block' : 'hidden'} md:block`}>
+                        <Link to="/" className="block py-2 text-gray-800 hover:text-blue-500">Home</Link>
+                        <Link to="/about" className="block py-2 text-gray-800 hover:text-blue-500">About</Link>
+                        <Link to="/perfumes" className="block py-2 text-gray-800 hover:text-blue-500">Perfumes</Link>
+                        <Link to="/dresses" className="block py-2 text-gray-800 hover:text-blue-500">Dresses</Link>
+                        <Link to="/shoes" className="block py-2 text-gray-800 hover:text-blue-500">Shoes</Link>
+                        <Link to="/bags" className="block py-2 text-gray-800 hover:text-blue-500">Bags</Link>
+                        <Link to="/contact" className="block py-2 text-gray-800 hover:text-blue-500">Contact</Link>
+
+                        <div className="flex items-center space-x-4">
+                            <span className="hover:text-blue-500 transition duration-300 text-gray-800 cursor-pointer">
+                                <FaHeart size={20} />
+                            </span>
+                            <Link to="/cart" className="flex items-center hover:text-blue-500 transition duration-300 text-gray-800">
+                                <FaShoppingCart size={20} />
+                                <span className="ml-2 bg-blue-500 text-white px-2 py-1 rounded-full">{cartItemCount}</span>
                             </Link>
                         </div>
-                        <div className="hidden md:flex items-center space-x-1">
-                            <Link to="/" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Home</Link>
-                            <Link to="/about" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">About</Link>
-                            <Link to="/contact" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Contact</Link>
-                            <Link to="/perfumes" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Perfumes</Link>
-                            <Link to="/dresses" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Dresses</Link>
-                            <Link to="/shoes" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Shoes</Link>
-                            <Link to="/bags" className="py-4 px-2 font-semibold hover:text-blue-500 transition duration-300 text-gray-800">Bags</Link>
-                        </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                        <form onSubmit={handleSearchSubmit} className="flex items-center">
-                            <input 
-                                type="text" 
-                                placeholder="Search..." 
-                                className="px-2 py-1 border rounded-lg"
-                                value={searchTerm}
-                                onChange={handleSearchChange}
-                            />
-                            <button type="submit" className="ml-2 text-gray-500 hover:text-blue-500 transition duration-300">
-                                <FaSearch size={20} />
-                            </button>
-                        </form>
-                        <Link to="/favorites" className="hover:text-blue-500 transition duration-300 text-gray-800">
-                            <FaHeart size={20} />
-                        </Link>
-                        <Link to="/cart" className="flex items-center hover:text-blue-500 transition duration-300 text-gray-800">
-                            <FaShoppingCart size={20} />
-                            <span className="ml-2 bg-blue-500 text-white px-2 py-1 rounded-full">{cartItemCount}</span>
-                        </Link>
                     </div>
                 </div>
             </div>
