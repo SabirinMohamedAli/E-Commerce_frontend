@@ -4,6 +4,7 @@ import Perfumes from './Perfumes';
 import Dresses from './Dresses';
 import Shoes from './Shoes';
 import Bags from './Bags';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -33,8 +34,11 @@ const Home = () => {
                 <h2 className="text-3xl font-bold mb-6">Bags</h2>
                 <Bags />
             </section>
+
+            <Footer />
         </div>
     );
 };
 
 export default Home;
+

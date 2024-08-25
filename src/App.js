@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import About from './pages/About'; // Import About page
+import Contact from './pages/Contact'; // Import Contact page
 import Perfumes from './pages/Perfumes';
 import Dresses from './pages/Dresses';
 import Shoes from './pages/Shoes';
@@ -22,6 +24,8 @@ function App() {
                 <Navbar cartItemCount={cartItems.length} />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} /> {/* About Route */}
+                    <Route path="/contact" element={<Contact />} /> {/* Contact Route */}
                     <Route path="/perfumes" element={<Perfumes onAddToCart={handleAddToCart} />} />
                     <Route path="/dresses" element={<Dresses onAddToCart={handleAddToCart} />} />
                     <Route path="/shoes" element={<Shoes onAddToCart={handleAddToCart} />} />
