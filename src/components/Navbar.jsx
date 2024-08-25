@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaSearch, FaHeart } from 'react-icons/fa';
 
 const Navbar = ({ cartItemCount }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        console.log("Searching for:", searchTerm);
+        // Halkaan waxaad ku dari kartaa function-ka lagu raadinaayo alaabta
+    };
+
     return (
         <nav className="bg-white shadow-lg">
             <div className="max-w-6xl mx-auto px-4">
@@ -10,8 +22,7 @@ const Navbar = ({ cartItemCount }) => {
                     <div className="flex space-x-7">
                         <div>
                             <Link to="/" className="flex items-center py-4 px-2 text-gray-800">
-                                <span className="font-semibold text-lg">SabirinBoutique
-                                </span>
+                                <span className="font-semibold text-lg">E-Commerce</span>
                             </Link>
                         </div>
                         <div className="hidden md:flex items-center space-x-1">
@@ -25,9 +36,18 @@ const Navbar = ({ cartItemCount }) => {
                         </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <Link to="/search" className="hover:text-blue-500 transition duration-300 text-gray-800">
-                            <FaSearch size={20} />
-                        </Link>
+                        <form onSubmit={handleSearchSubmit} className="flex items-center">
+                            <input 
+                                type="text" 
+                                placeholder="Search..." 
+                                className="px-2 py-1 border rounded-lg"
+                                value={searchTerm}
+                                onChange={handleSearchChange}
+                            />
+                            <button type="submit" className="ml-2 text-gray-500 hover:text-blue-500 transition duration-300">
+                                <FaSearch size={20} />
+                            </button>
+                        </form>
                         <Link to="/favorites" className="hover:text-blue-500 transition duration-300 text-gray-800">
                             <FaHeart size={20} />
                         </Link>

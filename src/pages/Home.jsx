@@ -16,22 +16,18 @@ const Home = () => {
             </section>
 
             <section id="perfumes" className="py-16">
-                <h2 className="text-3xl font-bold mb-6">Perfumes</h2>
                 <Perfumes />
             </section>
 
             <section id="dresses" className="py-16 bg-gray-100">
-                <h2 className="text-3xl font-bold mb-6">Dresses</h2>
                 <Dresses />
             </section>
 
             <section id="shoes" className="py-16">
-                <h2 className="text-3xl font-bold mb-6">Shoes</h2>
                 <Shoes />
             </section>
 
             <section id="bags" className="py-16 bg-gray-100">
-                <h2 className="text-3xl font-bold mb-6">Bags</h2>
                 <Bags />
             </section>
 

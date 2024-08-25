@@ -37,7 +37,7 @@ const Shoes = ({ onAddToCart }) => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-6">Shoes</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Shoes</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map(product => (
                     <div key={product.id} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">

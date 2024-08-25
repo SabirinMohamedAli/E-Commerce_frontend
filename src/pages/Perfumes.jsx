@@ -25,8 +25,8 @@ const Perfumes = ({ onAddToCart }) => {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-6">Perfumes</h2>
+        <div className="container mx-auto px-4 py-8  border-gray-300 rounded-lg shadow-lg">
+            <h2 className="text-3xl font-bold mb-6 text-center mb-3">Perfumes</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map(product => (
                     <div key={product.id} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
