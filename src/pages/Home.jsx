@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import about here
 import Perfumes from './Perfumes';
 import Dresses from './Dresses';
 import Shoes from './Shoes';
 import Bags from './Bags';
+// import contact here
 import Footer from '../components/Footer';
 
 const Home = ({ onAddToCart }) => {

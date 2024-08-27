@@ -28,11 +28,11 @@ import dress25 from '../images/45.jpg';
 
 const Dresses = ({ onAddToCart }) => {
     const products = [
-        { id: 1, name: 'Summer Dress', description: 'Comfortable and stylish', price: 70, image: dress1 },
-        { id: 2, name: 'Casual Dress', description: 'Perfect for everyday', price: 50, image: dress2 },
-        { id: 3, name: 'Evening Gown', description: 'Elegant and formal', price: 150, image: dress3 },
-        { id: 4, name: 'Floral Dress', description: 'Beautiful floral pattern', price: 80, image: dress4 },
-        { id: 5, name: 'Cocktail Dress', description: 'Perfect for parties', price: 120, image: dress5 },
+        { id: 1, name: ' stylish Abaya', description: 'Comfortable and stylish', price: 50, image: dress1 },
+        { id: 2, name: 'Abaya', description: 'Perfect for every lady', price: 40, image: dress2 },
+        { id: 3, name: 'Hijab', description: 'perfect for every muslim girl', price: 20, image: dress3 },
+        { id: 4, name: 'Abaya Dress', description: 'Beautiful floral pattern', price: 30, image: dress4 },
+        { id: 5, name: 'Abaya Dress', description: 'Perfect for parties', price: 120, image: dress5 },
         { id: 6, name: 'Maxi Dress', description: 'Long and flowing', price: 90, image: dress6 },
         { id: 7, name: 'Bodycon Dress', description: 'Figure-hugging design', price: 110, image: dress7 },
         { id: 8, name: 'Wrap Dress', description: 'Flattering and comfortable', price: 100, image: dress8 },

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Checkout = ({ cartItems }) => {
+const Checkout = ({ cartItems, setCartItems }) => {
     const [customerInfo, setCustomerInfo] = useState({
         name: '',
         email: '',
@@ -18,14 +18,53 @@ const Checkout = ({ cartItems }) => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here, you'd typically send the order data to the backend server for processing
-        console.log('Order submitted', {
-            customerInfo,
-            cartItems,
-        });
-        alert('Order placed successfully!');
+
+        const order = {
+            customerName: customerInfo.name,
+            customerEmail: customerInfo.email,
+            address: customerInfo.address,
+            city: customerInfo.city,
+            postalCode: customerInfo.postalCode,
+            country: customerInfo.country,
+            total: cartItems.reduce((total, item) => total + item.price * item.quantity, 0),
+            orderItems: cartItems.map(item => ({
+                productName: item.name,
+                price: item.price,
+                quantity: 1 // assuming quantity is 1 for simplicity
+            }))
+        };
+
+        try {
+            const response = await fetch("http://localhost:3005/api/CustomerOrder", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(order)
+            });
+
+            if (response.ok) {
+                alert("Order placed successfully!");
+                setCartItems([]);  // Tirtir shopping cart-ka frontend-ka
+                localStorage.removeItem('cartItems');  // Nadiifi localStorage ka
+
+                // Nadiifi xogta foomka
+                setCustomerInfo({
+                    name: '',
+                    email: '',
+                    address: '',
+                    city: '',
+                    postalCode: '',
+                    country: '',
+                });
+            } else {
+                alert("Failed to place order. Please try again.");
+            }
+        } catch (error) {
+            alert("An error occurred. Please try again later.");
+        }
     };
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);

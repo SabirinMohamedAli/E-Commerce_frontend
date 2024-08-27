@@ -44,7 +44,7 @@ function App() {
                     <Route path="/shoes" element={<Shoes onAddToCart={handleAddToCart} />} />
                     <Route path="/bags" element={<Bags onAddToCart={handleAddToCart} />} />
                     <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} onRemoveFromCart={handleRemoveFromCart} />} />
-                    <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
+                    <Route path="/checkout" element={<Checkout cartItems={cartItems} setCartItems={setCartItems} />} />
                 </Routes>
             </div>
         </Router>
