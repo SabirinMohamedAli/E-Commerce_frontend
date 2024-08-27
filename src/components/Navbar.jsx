@@ -13,7 +13,7 @@ const Navbar = ({ cartItemCount }) => {
         <nav className="bg-white shadow-lg">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between items-center py-4">
-                    <Link to="/" className="text-gray-800 text-lg font-semibold">SabirinStyle </Link>
+                    <Link to="/" className="text-gray-800 text-4xl font-semibold font-serif">SapirinStyle </Link>
                     <div className="md:hidden">
                         <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
                             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}

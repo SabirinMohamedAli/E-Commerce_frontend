@@ -25,12 +25,15 @@ import dress22 from '../images/42.jpg';
 import dress23 from '../images/43.jpg';
 import dress24 from '../images/44.jpg';
 import dress25 from '../images/45.jpg';
+import dress26 from '../images/67.jpg';
+import dress27 from '../images/68.jpg';
+import dress28 from '../images/69.jpg';
 
 const Dresses = ({ onAddToCart }) => {
     const products = [
-        { id: 1, name: ' stylish Abaya', description: 'Comfortable and stylish', price: 50, image: dress1 },
+        { id: 1, name: 'Stylish Abaya', description: 'Comfortable and stylish', price: 50, image: dress1 },
         { id: 2, name: 'Abaya', description: 'Perfect for every lady', price: 40, image: dress2 },
-        { id: 3, name: 'Hijab', description: 'perfect for every muslim girl', price: 20, image: dress3 },
+        { id: 3, name: 'Hijab', description: 'Perfect for every Muslim girl', price: 20, image: dress3 },
         { id: 4, name: 'Abaya Dress', description: 'Beautiful floral pattern', price: 30, image: dress4 },
         { id: 5, name: 'Abaya Dress', description: 'Perfect for parties', price: 120, image: dress5 },
         { id: 6, name: 'Maxi Dress', description: 'Long and flowing', price: 90, image: dress6 },
@@ -53,6 +56,9 @@ const Dresses = ({ onAddToCart }) => {
         { id: 23, name: 'Formal Gown', description: 'Stunning formal gown', price: 200, image: dress23 },
         { id: 24, name: 'Autumn Dress', description: 'Ideal for autumn days', price: 85, image: dress24 },
         { id: 25, name: 'Winter Dress', description: 'Stay warm and stylish', price: 120, image: dress25 },
+        { id: 26, name: 'Maid Dress', description: 'Stylish and elegant', price: 180, image: dress26 },
+        { id: 27, name: 'Vintage Dress', description: 'Classic and timeless', price: 100, image: dress27 },
+        { id: 28, name: 'Streetwear Dress', description: 'Cool and stylish', price: 150, image: dress28 },
     ];
 
     return (
@@ -60,8 +66,15 @@ const Dresses = ({ onAddToCart }) => {
             <h2 className="text-3xl font-bold mb-6 text-center">Dresses</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {products.map(product => (
-                    <div key={product.id} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                        <img className="w-full h-64 object-cover" src={product.image} alt={product.name} />
+                    <div 
+                        key={product.id} 
+                        className="max-w-sm rounded overflow-hidden shadow-lg bg-white transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                    >
+                        <img 
+                            className="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110" 
+                            src={product.image} 
+                            alt={product.name} 
+                        />
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">{product.name}</div>
                             <p className="text-gray-700 text-base">{product.description}</p>
@@ -69,7 +82,7 @@ const Dresses = ({ onAddToCart }) => {
                         </div>
                         <div className="px-6 py-4">
                             <button 
-                                className="bg-blue-500 text-white px-3 py-2 rounded" 
+                                className="bg-blue-500 text-white px-3 py-2 rounded transform hover:scale-110 transition-transform duration-300 ease-in-out" 
                                 onClick={() => onAddToCart(product)}>
                                 Add to Cart
                             </button>
