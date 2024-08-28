@@ -21,8 +21,8 @@ const About = () => {
                     <p className="text-lg mb-4 font-serif text-gray-700 border-l-4 border-blue-500 pl-4">
                         We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
                     </p>
-                    <p className="text-lg font-serif text-gray-700 border-l-4 border-blue-500 pl-4">
-                        Sincerely,<br />
+                    <p className="text-lg font-serif border-l-4 border-blue-500 pl-4 text-blue-600 font-bold">
+                  
                         Sabirin Mohamed ALi , Founder
                     </p>
                 </div>

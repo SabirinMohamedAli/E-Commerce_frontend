@@ -9,8 +9,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <div>
                         <h4 className="font-bold text-xl mb-4">Contact Us</h4>
-                        <p className="text-gray-400">+252 612345678</p>
-                        <p className="text-gray-400">sabirinmohamedali@gmail.com</p>
+                        <p className="text-gray-400">+252 612011700</p>
+                        <p className="text-gray-400">thaprinmohamett1333@gmail.com
+                        </p>
                         <p className="text-gray-400">Mogadishu, Somalia</p>
                     </div>
                     <div>
@@ -18,26 +19,24 @@ const Footer = () => {
                         <ul>
                             <li className="mb-2"><Link to="/" className="text-gray-400 hover:text-white">Home</Link></li>
                             <li className="mb-2"><Link to="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                            <li className="mb-2"><Link to="/services" className="text-gray-400 hover:text-white">Services</Link></li>
-                            <li className="mb-2"><Link to="/features" className="text-gray-400 hover:text-white">Features</Link></li>
+                            <li className="mb-2"><Link to="/Perfumes" className="text-gray-400 hover:text-white">Perfumes</Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold text-xl mb-4">Quick Links</h4>
                         <ul>
-                            <li className="mb-2"><Link to="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+                            <li className="mb-2"><Link to="/Shoes" className="text-gray-400 hover:text-white">Shoes</Link></li>
+                            <li className="mb-2"><Link to="/Dresses" className="text-gray-400 hover:text-white">Dresses</Link></li>
+                            <li className="mb-2"><Link to="/Bags" className="text-gray-400 hover:text-white">Bags</Link></li>
                             <li className="mb-2"><Link to="/contact" className="text-gray-400 hover:text-white">Contact Us</Link></li>
-                            <li className="mb-2"><Link to="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
-                            <li className="mb-2"><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
                         </ul>
                     </div>
                     <div className="text-center md:text-left">
                         <h4 className="font-bold text-xl mb-4">SabirinStyle</h4>
                         <div className="flex justify-center md:justify-start space-x-4 mb-4">
-                            <a href="https://www.facebook.com" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
-                            <a href="https://twitter.com" className="text-gray-400 hover:text-white"><FaTwitter /></a>
-                            <a href="https://www.instagram.com" className="text-gray-400 hover:text-white"><FaInstagram /></a>
-                            <a href="https://www.linkedin.com" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
+                            <a href="https://www.facebook.com/profile.php?id=100077115147759&mibextid=ZbWKwL" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
+                            <a href="https://www.instagram.com/sapirin_mohamett?igsh=Z3NuaXd0MmVrYW5m" className="text-gray-400 hover:text-white"><FaInstagram /></a>
+                            <a href="https://www.linkedin.com/in/thaprin-mohamett-4a4bb9261/" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
                         </div>
                     </div>
                 </div>

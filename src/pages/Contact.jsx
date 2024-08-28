@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -14,27 +15,19 @@ const Contact = () => {
         setFormData({ ...formData, [id]: value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        try {
-            const response = await fetch('http://localhost:3005/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+            .then((result) => {
+                console.log(result.text);
+                setSuccessMessage('Thank you! Your message has been sent.');
+            }, (error) => {
+                console.log(error.text);
+                setSuccessMessage('There was an issue submitting your message. Please try again later.');
             });
 
-            if (response.ok) {
-                setSuccessMessage('Thank you! Your message has been sent.');
-                setFormData({ name: '', email: '', message: '' });
-            } else {
-                setSuccessMessage('There was an issue submitting your message. Please try again later.');
-            }
-        } catch (error) {
-            setSuccessMessage('There was an issue submitting your message. Please try again later.');
-        }
+        setFormData({ name: '', email: '', message: '' });
     };
 
     return (
