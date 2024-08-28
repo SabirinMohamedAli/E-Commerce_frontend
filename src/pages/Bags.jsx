@@ -15,18 +15,19 @@ import bag12 from '../images/72.jpg';
 
 const Bags = ({ onAddToCart }) => {
     const products = [
-        { id: 1, name: 'Leather Tote', description: 'Spacious and durable', price: 150, image: bag1 },
-        { id: 2, name: 'Canvas Backpack', description: 'Perfect for travel', price: 100, image: bag2 },
-        { id: 3, name: 'Clutch Bag', description: 'Stylish and compact', price: 80, image: bag3 },
-        { id: 4, name: 'Crossbody Bag', description: 'Convenient and chic', price: 90, image: bag4 },
-        { id: 5, name: 'Messenger Bag', description: 'Professional and durable', price: 120, image: bag5 },
-        { id: 6, name: 'Satchel Bag', description: 'Classic and versatile', price: 110, image: bag6 },
-        { id: 7, name: 'Bucket Bag', description: 'Trendy and spacious', price: 130, image: bag7 },
-        { id: 8, name: 'Hobo Bag', description: 'Relaxed and casual', price: 140, image: bag8 },
-        { id: 9, name: 'Sling Bag', description: 'Easy and convenient', price: 70, image: bag9 },
-        { id: 10, name: 'Briefcase', description: 'Professional and sleek', price: 200, image: bag10 },
-        { id: 11, name: 'Leather Crossbody Bag', description: 'Comfortable and stylish', price: 160, image: bag11 },
-        { id: 12, name: 'Canvas Crossbody Bag', description: 'Cool and stylish', price: 170, image: bag12 },
+        { id: 1, name: 'Leather Tote Bags', description: 'Spacious and durable for everyday use', price: 150, image: bag1 },
+        { id: 2, name: 'Black Canvas Backpack', description: 'Perfect for travel with a stylish design', price: 100, image: bag2 },
+        { id: 3, name: 'Quilted Clutch Bag', description: 'Stylish and compact, ideal for nights out', price: 80, image: bag3 },
+        { id: 4, name: 'Black Quilted Crossbody Backpack', description: 'Convenient and chic for daily wear', price: 90, image: bag4 },
+        { id: 5, name: 'Pearl Handle Messenger Bag', description: 'Professional and elegant with a durable design', price: 120, image: bag5 },
+        { id: 6, name: 'Pink and Beige Satchel Bag', description: 'Classic and versatile for everyday use', price: 110, image: bag6 },
+        { id: 7, name: 'Green Floral Bucket Bag', description: 'Trendy and spacious with a floral touch', price: 130, image: bag7 },
+        { id: 8, name: 'Pink Quilted Hobo Backpack', description: 'Relaxed and casual with a chic design', price: 140, image: bag8 },
+        { id: 9, name: 'Black Sling Bag', description: 'Easy and convenient for everyday use', price: 70, image: bag9 },
+        { id: 10, name: 'White Quilted Backpack', description: 'Professional and sleek with a modern design', price: 200, image: bag10 },
+        { id: 11, name: 'Pink Leather Crossbody Bag', description: 'Comfortable and stylish with a cute charm', price: 160, image: bag11 },
+        { id: 12, name: 'Black Canvas Crossbody Bag', description: 'Cool and stylish with a durable build', price: 170, image: bag12 },
+        
     ];
 
     return (

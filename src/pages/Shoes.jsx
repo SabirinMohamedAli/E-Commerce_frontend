@@ -19,22 +19,23 @@ import shoe16 from '../images/70.jpg';
 
 const Shoes = ({ onAddToCart }) => {
     const products = [
-        { id: 1, name: 'Nike Air Max', description: 'Sporty and comfortable', price: 120, image: shoe1 },
-        { id: 2, name: 'Adidas UltraBoost', description: 'Perfect for running', price: 140, image: shoe2 },
-        { id: 3, name: 'Puma RS-X', description: 'Stylish and modern', price: 110, image: shoe3 },
-        { id: 4, name: 'Reebok Classic', description: 'Timeless design', price: 90, image: shoe4 },
-        { id: 5, name: 'Converse Chuck Taylor', description: 'Classic and cool', price: 70, image: shoe5 },
-        { id: 6, name: 'Vans Old Skool', description: 'Skateboarding shoes', price: 60, image: shoe6 },
-        { id: 7, name: 'New Balance 574', description: 'Comfort and style', price: 80, image: shoe7 },
-        { id: 8, name: 'ASICS Gel-Lyte', description: 'Durable and comfortable', price: 100, image: shoe8 },
-        { id: 9, name: 'Jordan 1', description: 'Basketball legend', price: 150, image: shoe9 },
-        { id: 10, name: 'Under Armour HOVR', description: 'High performance', price: 130, image: shoe10 },
-        { id: 11, name: 'Timberland Boots', description: 'Rugged and durable', price: 160, image: shoe11 },
-        { id: 12, name: 'Clarks Desert Boots', description: 'Casual and stylish', price: 120, image: shoe12 },
-        { id: 13, name: 'Dr. Martens 1460', description: 'Iconic boots', price: 140, image: shoe13 },
-        { id: 14, name: 'Birkenstock Sandals', description: 'Comfortable and casual', price: 80, image: shoe14 },
-        { id: 15, name: 'Crocs Classic', description: 'Comfortable and trendy', price: 50, image: shoe15 },
-        { id: 16, name: 'Nike Air Zoom', description: 'Comfortable and stylish', price: 90, image: shoe16 },
+        { id: 1, name: ' Gold High-Heeled Sandals ', description: 'Elegant and stylish for special occasions ', price: 30, image: shoe1 },
+        { id: 2, name: 'White Bow Sandals', description: ' Cute and comfortable for casual wear ', price: 15, image: shoe2 },
+        { id: 3, name: ' White Sneakers with Pink Accents', description: 'Trendy and comfortable for everyday wear.', price: 20, image: shoe3 },
+        { id: 4, name: '  White Sneakers with Green Accents', description: ' Fresh and stylish with a timeless design', price: 25, image: shoe4 },
+        { id: 5, name: ' Black Velvet Loafers', description: 'Elegant and comfortable for formal wear. ', price: 70, image: shoe5 },
+        { id: 6, name: ' Black Leather Dress Shoes ', description: ' Classic and timeless for formal occasions.', price: 60, image: shoe6 },
+        { id: 7, name: 'White and Black Running Shoes', description: 'Comfortable and stylish for everyday activities.', price: 45, image: shoe7 },
+        { id: 8, name: '  Blue Kids Sneakers', description: 'Durable and fun with a playful design.', price: 20, image: shoe8 },
+        { id: 9, name: 'Silver Glitter Sandals', description: 'Sparkly and elegant for special occasions', price: 15, image: shoe9 },
+        { id: 10, name: 'Gold Strappy Sandals', description: 'High performance and stylish for formal events', price: 12.99, image: shoe10 },
+        { id: 11, name: 'White Kids\' Sneakers with Pink Accents', description: 'Rugged and durable for everyday wear', price: 10, image: shoe11 },
+        { id: 12, name: 'Blue Slide Sandals', description: 'Casual and comfortable for relaxed days', price: 8.99, image: shoe12 },
+        { id: 13, name: 'Burgundy High Heels', description: 'Sleek and elegant for a night out', price: 40, image: shoe13 },
+        { id: 14, name: 'White Slip-On Sandals', description: 'Comfortable and casual for everyday wear', price: 20, image: shoe14 },
+        { id: 15, name: 'Black Slide Sandals', description: 'Comfortable and trendy for casual outings', price: 10, image: shoe15 },
+        { id: 16, name: 'Black and White Slide Sandals', description: 'Comfortable and stylish for active days', price: 10, image: shoe16 },
+        
     ];
 
     return (

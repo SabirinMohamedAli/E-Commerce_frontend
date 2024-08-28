@@ -14,20 +14,27 @@ const Contact = () => {
         setFormData({ ...formData, [id]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Here you would typically send the data to your backend server
-        // For this example, we'll just simulate a successful submission
+        try {
+            const response = await fetch('http://localhost:3005/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-        setSuccessMessage('Thank you! Your message has been sent.');
-
-        // Reset form fields
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        });
+            if (response.ok) {
+                setSuccessMessage('Thank you! Your message has been sent.');
+                setFormData({ name: '', email: '', message: '' });
+            } else {
+                setSuccessMessage('There was an issue submitting your message. Please try again later.');
+            }
+        } catch (error) {
+            setSuccessMessage('There was an issue submitting your message. Please try again later.');
+        }
     };
 
     return (
