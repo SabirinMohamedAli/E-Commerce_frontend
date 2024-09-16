@@ -1,13 +1,16 @@
-import React from 'react';
+import React from 'react'; 
 import { Link } from 'react-router-dom';
 
 const Cart = ({ cartItems, setCartItems }) => {
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     const handleQuantityChange = (index, quantity) => {
-        const updatedCart = [...cartItems];
-        updatedCart[index].quantity = quantity;
-        setCartItems(updatedCart);
+        const numQuantity = parseInt(quantity, 10);
+        if (!isNaN(numQuantity) && numQuantity > 0) {
+            const updatedCart = [...cartItems];
+            updatedCart[index].quantity = numQuantity;
+            setCartItems(updatedCart);
+        }
     };
 
     const handleRemoveItem = (index) => {
@@ -32,7 +35,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                                     <input 
                                         type="number" 
                                         value={item.quantity} 
-                                        onChange={(e) => handleQuantityChange(index, parseInt(e.target.value))} 
+                                        onChange={(e) => handleQuantityChange(index, e.target.value)} 
                                         className="w-16 px-2 py-1 border rounded" 
                                         min="1"
                                     />
